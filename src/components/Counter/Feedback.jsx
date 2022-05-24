@@ -1,6 +1,8 @@
 import s from './Counter.module.css'
 import { FeedbackOptions } from './FeedbackOptions'
 import { nanoid } from 'nanoid'
+import PropTypes from 'prop-types';
+
 
 export function Feedback({ title, options }) {
     const names = ['good', 'neutral', 'bad']
@@ -19,3 +21,8 @@ export function Feedback({ title, options }) {
    </div>
   )
 }
+
+Feedback.propTypes = {
+   title: PropTypes.string.isRequired,
+   options: PropTypes.func.isRequired
+   }
